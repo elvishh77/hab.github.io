@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!-- Keep your LISAt-style stack -->
   <script src="static/css/carousel.js"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Social cards -->
-  <meta name="description" content="IVA: Instruct, Verify, Act — Teaching VLA Models to Reject the Impossible. IVA detects false-premise instructions, clarifies or corrects them in language, and then acts safely.">
-  <meta property="og:title" content="IVA: Instruct, Verify, Act" />
-  <meta property="og:description" content="Teaching VLA Models to Reject the Impossible — Detect the impossible. Clarify intent. Act safely." />
-  <meta property="og:url" content="http://iva-vla.github.io" />
-  <meta property="og:image" content="static/images/fig1_teaser.png" />
+  <meta name="description" content="Seg the HAB: Language-Guided Geospatial Algae Bloom Reasoning and Segmentation">
+  <meta property="og:title" content="Seg the HAB" />
+  <meta property="og:description" content="Language-Guided Geospatial Algae Bloom Reasoning and Segmentation" />
+  <meta property="og:url" content="http://hab.github.io" />
+  <meta property="og:image" content="static/images/hab_teaser.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
-  <meta name="twitter:title" content="IVA: Instruct, Verify, Act">
-  <meta name="twitter:description" content="Teaching VLA Models to Reject the Impossible — an unified framework to detect false-premise instructions, clarify them, and act safely.">
-  <meta name="twitter:image" content="static/images/fig1_teaser.png">
+  <meta name="twitter:title" content="Seg the HAB">
+  <meta name="twitter:description" content="Language-Guided Geospatial Algae Bloom Reasoning and Segmentation">
+  <meta name="twitter:image" content="static/images/hab_teaser.png">
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- Keywords -->
-  <meta name="keywords" content="Vision-Language-Action, Robotics, False Premise, Instruction Following, Human-Robot Interaction">
+  <meta name="keywords" content="Harmful Algal Blooms, Remote Sensing, Vision-Language Models, Segmentation, Climate Change">
 
-  <title>IVA: Instruct, Verify, Act</title>
+  <title>Seg the HAB</title>
 
   <!-- Fonts & CSS -->
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
@@ -42,42 +41,37 @@
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
 
-  <!-- ===== Responsive helpers (kept minimal) ===== -->
+  <!-- Responsive helpers -->
   <style>
-    /* Title row defaults (desktop) */
     .publication-title-nowrap { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     .title-row { display: inline-flex; align-items: center; gap: 12px; }
     .title-row img { width: 128px; height: 128px; border-radius: 12px; }
 
-    /* Figure helpers */
     .fig-medium { max-width: 900px; margin: 1rem auto; }
-    .fig1 img { width: 150%; margin: auto; display: block; }
-    .fig-wide img { width: 150%; margin: auto; display: block; } /* Table 1 & Fig C.2 for consistency */
+    .fig1 img { width: 100%; margin: auto; display: block; }
+    .fig-wide img { width: 100%; margin: auto; display: block; }
 
-    /* Tablets */
     @media (max-width: 768px) {
       .publication-title-nowrap { white-space: normal; }
       .title-row img { width: 96px; height: 96px; }
-      .fig1 img { width: 80%; }
-      .fig-wide img { width: 85%; }
+      .fig1 img { width: 100%; }
+      .fig-wide img { width: 100%; }
     }
 
-    /* Phones */
     @media (max-width: 480px) {
       .title-row { flex-direction: column; align-items: center; }
       .publication-title-nowrap {
         white-space: normal;
-        font-size: 1.75rem !important;  /* shrink instead of clipping */
+        font-size: 1.75rem !important;
         line-height: 1.15;
         text-align: center;
       }
       .subtitle.is-4 { font-size: 1.1rem; line-height: 1.3; }
       .title-row img { width: 84px; height: 84px; }
-      .fig1 img { width: 90%; }
-      .fig-wide img { width: 92%; }
+      .fig1 img { width: 100%; }
+      .fig-wide img { width: 100%; }
     }
 
-    /* Very small phones */
     @media (max-width: 360px) {
       .publication-title-nowrap { font-size: 1.55rem !important; }
       .title-row img { width: 72px; height: 72px; }
@@ -93,15 +87,11 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered is-vcentered">
           <div class="column has-text-centered is-four-fifths is-vcentered">
-            <!-- Title + logo (stacks on mobile) -->
-            <div class="title-row">
-              <img src="static/images/iva_icon.png" alt="IVA icon">
-              <h1 class="title is-1 publication-title publication-title-nowrap" style="margin:0;">
-                IVA: Instruct, Verify, Act
-              </h1>
-            </div>
+            <h1 class="title is-1 publication-title" style="margin:0;">
+              Seg the HAB
+            </h1>
             <p class="subtitle is-4" style="margin-top:.5rem;">
-              Teaching VLA Models to Reject the Impossible
+              Language-Guided Geospatial Algae Bloom Reasoning and Segmentation
             </p>
           </div>
         </div>
@@ -111,20 +101,23 @@
             <div class="column has-text-centered is-four-fifths">
               <!-- Authors -->
               <div class="is-size-5 publication-authors">
-                <span class="author-block"><a href="https://wen-hanhsieh.github.io/" target="_blank">Wen-Han Hsieh *</a>,</span>
-                <span class="author-block"><a href="https://elvishh77.github.io/" target="_blank">Elvis Hsieh *</a>,</span>
-                <span class="author-block"><a href="https://dantong88.github.io/" target="_blank">Dantong Niu</a>,</span>
-                <span class="author-block"><a href="https://people.eecs.berkeley.edu/~trevor/" target="_blank">Trevor Darrell</a>,</span>
-                <span class="author-block"><a href="https://roeiherz.github.io/" target="_blank">Roei Herzig</a>,</span>
-                <span class="author-block"><a href="https://dchan.cc/" target="_blank">David M. Chan</a></span>
+                <span class="author-block">Patterson Hsieh<sup>1,*</sup>,</span>
+                <span class="author-block">Jerry Yeh<sup>2,*</sup>,</span>
+                <span class="author-block">Mao-Chi He<sup>2,*</sup>,</span>
+                <span class="author-block">Wen-Han Hsieh<sup>2</sup>,</span>
+                <span class="author-block">Elvis Hsieh<sup>2</sup></span>
               </div>
 
               <div class="is-size-5 publication-authors">
-                <span class="author-block">UC Berkeley</span>
+                <span class="author-block"><sup>1</sup>UC San Diego, <sup>2</sup>UC Berkeley</span>
               </div>
 
               <div class="is-size-6 publication-authors has-text-centered">
-                <span class="author-block">EMNLP 2025 (Findings)</span>
+                <span class="author-block">NeurIPS 2025 Workshop: Tackling Climate Change with Machine Learning</span>
+              </div>
+
+              <div class="is-size-6 publication-authors has-text-centered" style="margin-top: 0.5rem;">
+                <span class="author-block"><sup>*</sup>Equal Contribution</span>
               </div>
 
               <br>
@@ -132,12 +125,12 @@
               <div class="column has-text-centered">
                 <div class="publication-links">
                   <span class="link-block">
-                    <a href="https://arxiv.org/abs/2508.16292" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <a href="https://arxiv.org/abs/submit/6911290" target="_blank" class="external-link button is-normal is-rounded is-dark">
                       <span class="icon"><i class="ai ai-arxiv"></i></span><span>Paper</span>
                     </a>
                   </span>
                   <span class="link-block">
-                    <a href="https://github.com/Wen-HanHsieh" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <a href="https://github.com/algos-hab" target="_blank" class="external-link button is-normal is-rounded is-dark">
                       <span class="icon"><i class="fa-brands fa-github"></i></span><span>Code &amp; Data: Coming Soon</span>
                     </a>
                   </span>
@@ -159,20 +152,29 @@
         <div class="column is-full">
           <h2 class="title is-4">Abstract</h2>
           <div class="content has-text-justified">
-            <!-- Paper-faithful wording -->
             <p>
-              IVA is <em>an unified framework</em> for Vision-Language-Action (VLA) models that
-              <em>detects</em> when an instruction is unfulfillable (false premise), <em>clarifies or corrects</em> it in natural language,
-              and then <em>acts safely</em>. Trained with paired true- and false-premise instructions,
-              IVA improves false-premise handling while maintaining strong true-premise task performance.
+              Climate change is intensifying the occurrence of harmful algal blooms (HAB), particularly cyanobacteria, 
+              which threaten aquatic ecosystems and human health through oxygen depletion, toxin release, and disruption 
+              of marine biodiversity. Traditional monitoring approaches, such as manual water sampling, remain labor-intensive 
+              and limited in spatial and temporal coverage. Recent advances in vision-language models (VLMs) for remote 
+              sensing have shown potential for scalable AI-driven solutions, yet challenges remain in reasoning over imagery 
+              and quantifying bloom severity.
+            </p>
+            <p>
+              In this work, we introduce <strong>ALGOS (ALGae Observation and Segmentation)</strong>, a segmentation-and-reasoning 
+              system for HAB monitoring that combines remote sensing image understanding with severity estimation. Our approach 
+              integrates GeoSAM-assisted human evaluation for high-quality segmentation mask curation and fine-tunes vision 
+              language models on severity prediction using the Cyanobacteria Aggregated Manual Labels (CAML) from NASA. 
+              Experiments demonstrate that ALGOS achieves robust performance on both segmentation and severity-level estimation, 
+              paving the way toward practical and automated cyanobacterial monitoring systems.
             </p>
           </div>
 
-          <!-- Figure 1 (after abstract, sized responsively) -->
+          <!-- Pipeline Figure -->
           <figure class="image fig-medium fig1">
-            <img src="static/images/iva_gif_new.gif"
-                 alt="Figure 1: IVA detects a false-premise instruction, clarifies, and proposes a valid alternative." />
-            <figcaption>Figure 1: IVA detects a false-premise instruction, clarifies, and proposes a valid alternative.</figcaption>
+            <img src="static/images/pipeline.png"
+                 alt="Figure 1: ALGOS pipeline showing multimodal LLM with SAM decoder" />
+            <figcaption><strong>Figure 1:</strong> The pipeline of ALGOS. Given the input image and text query, the multimodal LLM generates text output. The last-layer embedding for the &lt;SEG&gt; token is then decoded into the segmentation mask via the SAM decoder.</figcaption>
           </figure>
 
         </div>
@@ -180,17 +182,18 @@
     </div>
   </section>
 
-  <!-- ===================== WHY IVA ===================== -->
-  <section class="section hero">
+  <!-- ===================== MOTIVATION ===================== -->
+  <section class="section hero" style="background-color: #f5f5f5;">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-full">
-          <h2 class="title is-4">Why IVA?</h2>
+          <h2 class="title is-4">The Problem</h2>
           <div class="content has-text-justified">
             <ul>
-              <li>Most VLAs assume user instructions are always feasible; in practice, people often issue commands with <b>false premises</b> (missing objects, attribute mismatches, or impossible actions).</li>
-              <li>Naïvely following such instructions is unsafe or wasteful. IVA introduces explicit <b>detection</b> and <b>clarification/correction</b> to keep interaction safe and productive.</li>
-              <li>We evaluate both <b>In-Domain</b> (plausible-but-absent) and <b>Out-of-Domain</b> (impossible/absurd) false premises, and train IVA to handle both categories.</li>
+              <li><strong>Ecological & Health Impact:</strong> HAB cause mass fish mortality, ecosystem disruption, and release toxins harmful to humans and wildlife.</li>
+              <li><strong>Economic Burden:</strong> The 2017-2018 Florida Red Tide alone caused an estimated $2.7 million in losses, with billions lost annually worldwide.</li>
+              <li><strong>Monitoring Limitations:</strong> Existing methods rely on manual water sampling and microscopy—costly, time-consuming, and geographically constrained.</li>
+              <li><strong>Fragmented AI Solutions:</strong> Prior work addresses either bloom severity prediction <em>or</em> spatial segmentation in isolation, limiting comprehensive monitoring capabilities.</li>
             </ul>
           </div>
         </div>
@@ -203,82 +206,96 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-full">
-          <h2 class="title is-4">Our Solution</h2>
+          <h2 class="title is-4">Our Solution: ALGOS</h2>
           <div class="content has-text-justified">
+            <p>ALGOS is a unified vision-language framework that bridges reasoning segmentation with HAB severity assessment in satellite imagery.</p>
+            
+            <h3 class="title is-5" style="margin-top: 1.5rem;">Dataset Curation</h3>
             <ul>
-              <li><b>Single-stage end-to-end tuning:</b> IVA jointly learns <i>false-premise detection</i>, <i>language clarification/correction</i>, and <i>action prediction</i> (unlike two-stage baselines).</li>
-              <li><b>Inputs &amp; Outputs:</b> front camera and the previous <b>5 joint positions (angles)</b> → predict the 2-D visual trace and the next action as an <b>8-D vector</b> (<b>7 joint velocities</b> + binary gripper).</li>
-              <li><b>Architecture:</b> frozen vision &amp; language encoders; an autoregressive decoder fine-tuned with <i>LoRA</i> adapters for efficient training.</li>
-              <li><b>Instruction template:</b> structured prompt with robot type, control mode, task, and a short proprioceptive history enables grounded reasoning and safe actions.</li>
+              <li><strong>HAB Segmentation Dataset:</strong> GeoSAM-assisted annotation with human evaluation on CAML Sentinel-2 imagery. Interactive mask generation with positive/negative prompts and ROI boxes, followed by morphological filtering and human validation.</li>
+              <li><strong>HAB Reasoning Dataset:</strong> Five-level severity scale based on WHO recreational guidance (Level 1: &lt;2×10⁴ to Level 5: ≥1×10⁷ cells/mL). Natural language query templates paired with satellite images and severity labels.</li>
             </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ===================== DATASET ===================== -->
-  <section class="section hero">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-full">
-          <h2 class="title is-4">How did we construct the dataset?</h2>
-          <div class="content has-text-justified">
+            <h3 class="title is-5" style="margin-top: 1.5rem;">Architecture</h3>
             <ul>
-              <li>Built on <b>RLBench</b> trajectories across <b>9 tasks</b>, with paired <i>true</i> and <i>false-premise</i> prompts.</li>
-              <li><b>800 episodes per task</b>; false premises are injected at <b>10%</b> of the steps: about <b>65%</b> In-Domain FP episodes and <b>20%</b> Out-of-Domain FP episodes (rest true-premise).</li>
-              <li>In-Domain FP: plausible but absent objects (e.g., “open the middle block” in a drawer scene). Out-of-Domain FP: clearly infeasible requests (e.g., “open the top elephant”).</li>
+              <li><strong>Vision Encoder:</strong> Remote-CLIP ViT-L/14 optimized for satellite imagery</li>
+              <li><strong>Language Model:</strong> Vicuna-7B with specialized &lt;SEG&gt; token for segmentation</li>
+              <li><strong>Decoder:</strong> SAM decoder head for pixel-level mask prediction</li>
+              <li><strong>Training:</strong> Joint optimization with text generation loss and segmentation loss (BCE + DICE)</li>
             </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ===================== EVALUATION ===================== -->
-  <section class="section hero">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-full">
-          <h2 class="title is-4">Evaluation</h2>
-          <div class="content has-text-justified">
+            <h3 class="title is-5" style="margin-top: 1.5rem;">Implementation</h3>
             <ul>
-              <li><b>Episodes:</b> 9 RLBench tasks × 25 episodes each = <b>225 episodes</b> with randomized object poses and paired prompts.</li>
-              <li><b>(1) Detection:</b> parse the model’s text to classify <i>Accept</i> (true-premise) vs <i>Clarify/Refuse</i> (false-premise); average per-step FP scores per episode.</li>
-              <li><b>(2) Execution:</b> when IVA accepts, execute the predicted <b>8D joint-velocity</b> sequence; task success judged by the RLBench success detector.</li>
-              <li><b>(3) Overall:</b> average Detection + Execution over all 225 episodes into a single accuracy metric.</li>
+              <li>Trained on 8× NVIDIA DGX A100 (80GB) GPUs</li>
+              <li>LoRA adapters for efficient fine-tuning</li>
+              <li>Joint training on HAB, FP-Ref-COCO, and ReasonSeg datasets</li>
+              <li>~6 hours training time</li>
             </ul>
           </div>
+
+          <!-- Interactive Segmentation Workflow -->
+          <figure class="image fig-medium fig-wide" style="margin-top: 2rem;">
+            <img src="static/images/segmentation_workflow.png" alt="Interactive segmentation workflow">
+            <figcaption><strong>Figure 2:</strong> Interactive segmentation workflow used during data curation. (a) User-provided prompts (green: positive, red: negative), (b) Generated mask overlay, (c) Bounding boxes extracted.</figcaption>
+          </figure>
+
         </div>
       </div>
     </div>
   </section>
 
   <!-- ===================== RESULTS ===================== -->
-  <section class="section hero">
+  <section class="section hero" style="background-color: #f5f5f5;">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-full">
           <h2 class="title is-4">Results</h2>
 
           <div class="content has-text-justified">
+            <p>ALGOS achieves strong performance across both segmentation and severity prediction tasks:</p>
+            
+            <h3 class="title is-5" style="margin-top: 1.5rem;">Segmentation Performance</h3>
             <ul>
-              <li><b>False-premise detection:</b> <b>100%</b> (In-Domain) and <b>97.78%</b> (Out-of-Domain).</li>
-              <li><b>Improvement over baseline:</b> IVA markedly boosts FP detection and increases successful responses under FP scenarios (see Table&nbsp;1 per-task details).</li>
-              <li><b>True-premise performance:</b> IVA maintains strong success (<b>42.67% ± 8.34%</b>) comparable to LLaRVA (<b>38.67% ± 8.55%</b>).</li>
+              <li><strong>cIoU (per-image):</strong> 0.6493 (vs. LISAT: 0.1083, LISA-7B: 0.1373)</li>
+              <li><strong>gIoU (dataset-level):</strong> 0.5969 (vs. LISAT: 0.1052, LISA-7B: 0.1274)</li>
+              <li>ALGOS far surpasses baseline models in accurately capturing both per-image bloom regions and large contiguous extents</li>
+            </ul>
+
+            <h3 class="title is-5" style="margin-top: 1.5rem;">Severity Prediction</h3>
+            <ul>
+              <li><strong>MSE:</strong> 2.984 (vs. LLaVA-7B: 3.868) — 22.8% reduction</li>
+              <li><strong>RMSE:</strong> 1.727 (vs. LLaVA-7B: 1.967)</li>
+              <li><strong>MAE:</strong> 1.365 (vs. LLaVA-7B: 1.587)</li>
             </ul>
           </div>
 
-          <!-- Table 1 -->
-          <figure class="image fig-medium fig-wide">
-            <img src="static/images/table1_results.png" alt="Table 1: IVA vs. LLaRVA across 9 RLBench tasks">
-            <figcaption>Table 1: Per-task Overall, False-Premise Detection (ID/OOD), and True-Premise Success across 9 RLBench tasks.</figcaption>
-          </figure>
+          <!-- Results Tables -->
+          <div style="display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; margin-top: 2rem;">
+            <figure class="image" style="max-width: 400px;">
+              <img src="static/images/table1_segmentation.png" alt="Table 1: Segmentation Results">
+              <figcaption><strong>Table 1:</strong> Segmentation results comparing LISAT, LISA, and ALGOS.</figcaption>
+            </figure>
+            <figure class="image" style="max-width: 400px;">
+              <img src="static/images/table2_severity.png" alt="Table 2: Severity Prediction Results">
+              <figcaption><strong>Table 2:</strong> Severity prediction results comparing LLaVA baseline and ALGOS.</figcaption>
+            </figure>
+          </div>
 
-          <!-- Figure 2 -->
-          <figure class="image fig-medium fig-wide">
-            <img src="static/images/figC2_tasks.png" alt="Figure 2: Qualitative examples across 9 RLBench tasks">
-            <figcaption>Figure 2: Qualitative examples across 9 RLBench tasks showing IVA's false-premise handling and safe alternative suggestions.</figcaption>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== QUALITATIVE RESULTS ===================== -->
+  <section class="section hero">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <h2 class="title is-4">Qualitative Comparison</h2>
+          
+          <figure class="image fig-wide" style="margin-top: 2rem;">
+            <img src="static/images/qualitative_comparison.png" alt="Qualitative comparison across models">
+            <figcaption><strong>Figure 3:</strong> Qualitative comparison of predictions across LISA-7B, LISAT, and ALGOS models. ALGOS demonstrates superior bloom localization and boundary delineation across diverse query types.</figcaption>
           </figure>
 
         </div>
@@ -286,17 +303,36 @@
     </div>
   </section>
 
-  <!-- ===================== TAKEAWAYS ===================== -->
+  <!-- ===================== KEY TAKEAWAYS ===================== -->
+  <section class="section hero" style="background-color: #f5f5f5;">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <h2 class="title is-4">Key Contributions</h2>
+          <div class="content has-text-justified">
+            <ul>
+              <li><strong>Unified Framework:</strong> First system to jointly perform spatial segmentation and severity-level estimation for HAB monitoring in satellite imagery.</li>
+              <li><strong>High-Quality Dataset:</strong> Semi-supervised curation pipeline combining GeoSAM automation with human validation for robust segmentation masks.</li>
+              <li><strong>Strong Performance:</strong> Significant improvements over baselines in both segmentation (6× cIoU increase) and severity prediction (23% MSE reduction).</li>
+              <li><strong>Scalable Monitoring:</strong> Enables automated, wide-area HAB monitoring for ecological assessment and public health decision-making.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== LIMITATIONS & FUTURE WORK ===================== -->
   <section class="section hero">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-full">
-          <h2 class="title is-4">Key Takeaways</h2>
+          <h2 class="title is-4">Limitations & Future Work</h2>
           <div class="content has-text-justified">
             <ul>
-              <li>IVA explicitly reasons about <b>feasibility</b>, clarifies impossible requests, and proposes valid alternatives—leading to safer HRI.</li>
-              <li>Robust FP handling <b>does not</b> degrade feasible task performance.</li>
-              <li>The framework is general and extendable to broader robotic tasks, sensors, and interaction settings.</li>
+              <li><strong>Geographic Scope:</strong> Current evaluation limited to CAML dataset regions and seasons. Generalization to diverse aquatic environments requires larger-scale, cross-region benchmarks.</li>
+              <li><strong>Data Dependencies:</strong> Reliance on curated datasets highlights the need for continuous data integration pipelines that adapt to evolving ecological conditions.</li>
+              <li><strong>Future Directions:</strong> Extending evaluations to global waterbodies, incorporating temporal dynamics, and developing real-time monitoring capabilities for operational deployment.</li>
             </ul>
           </div>
         </div>
@@ -308,12 +344,12 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@inproceedings{hsieh2025do,
-    title     = {Do What? Teaching Vision-Language-Action Models to Reject the Impossible},
-    author    = {Wen-Han Hsieh and Elvis Hsieh and Dantong Niu and Trevor Darrell and Roei Herzig and David M. Chan},
-    booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2025},
+      <pre><code>@article{hsieh2025segthehab,
+    title     = {Seg the HAB: Language-Guided Geospatial Algae Bloom Reasoning and Segmentation},
+    author    = {Patterson Hsieh and Jerry Yeh and Mao-Chi He and Wen-Han Hsieh and Elvis Hsieh},
+    journal   = {NeurIPS 2025 Workshop on Tackling Climate Change with Machine Learning},
     year      = {2025},
-    url       = {https://arxiv.org/abs/2508.16292}
+    note      = {arXiv:submit/6911290 [cs.AI]}
 }</code></pre>
     </div>
   </section>

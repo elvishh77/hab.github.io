@@ -1,4 +1,4 @@
-# IVA: Teaching Vision-Language-Action Models to Reject the Impossible
+# Seg the HAB: Language-Guided Geospatial Algae Bloom Reasoning and Segmentation
 
 This is an academic paper project page template.
 
